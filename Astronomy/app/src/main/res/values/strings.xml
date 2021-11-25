@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Astronomy</string>
+    <string name="no_internet">We are not connected to the internet, showing you the last image we have.</string>
+    <string name="apod_image">apod image</string>
+</resources>
