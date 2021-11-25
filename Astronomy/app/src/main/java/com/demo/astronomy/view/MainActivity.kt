@@ -42,12 +42,15 @@ class MainActivity : AppCompatActivity() {
         layout = findViewById(R.id.ll_layout)
 
         if (AppUtils.isUserNotVisitingFirstTime() && !AppUtils.isInternetConnected()) {
-            showSnackbar()
+            showSnackbar(getString(R.string.no_internet))
             showLocalAPODData()
         } else if (AppUtils.isUserNotVisitingFirstTime()) {
             showLocalAPODData()
         } else {
-            callAPODService()
+            if (AppUtils.isInternetConnected())
+                callAPODService()
+            else
+                showSnackbar(getString(R.string.no_connection))
         }
     }
 
@@ -116,8 +119,8 @@ class MainActivity : AppCompatActivity() {
     /**
      * Displays the snackbar
      */
-    private fun showSnackbar() {
-        Snackbar.make(this, layout, getString(R.string.no_internet), Snackbar.LENGTH_INDEFINITE)
+    private fun showSnackbar(internetText: String) {
+        Snackbar.make(this, layout, internetText, Snackbar.LENGTH_INDEFINITE)
             .show()
     }
 }
