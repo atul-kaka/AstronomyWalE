@@ -3,7 +3,7 @@ User can see the Astronomy Picture of the Day, so that user can learn new things
 
 ## Building the App
 1. Clone the repository https://github.com/atul-kaka/AstronomyWalE.git
-2. Android Studio(These instructions were tested with Android Studio version 4.0.1)
+2. Android Studio(These instructions were tested with Android Studio Arctics Fox | 2020.3.1)
 3. Open Android Studio and select File->Open... or from the Android Launcher select Import project (Eclipse ADT, Gradle, etc.) and navigate to the root directory of your project.
 4. Select the directory or drill in and select the file build.gradle in the cloned repo.
 5. Click 'OK' to open the the project in Android Studio.
